@@ -4,6 +4,7 @@ import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import Lab1 from './pages/Lab1';
 import Lab2 from './pages/Lab2';
+import Lab3 from './pages/Lab3';
 import NotFound from './pages/NotFound';
 // import { data } from './module-data';
 // import PersonProfile from './components/PersonProfile';
@@ -33,6 +34,12 @@ function App() {
     },
     {
       id: 4,
+      label: "Laboratorium 3",
+      urlPattern: "/lab3",
+      element: <Lab3 />,
+    },
+    {
+      id: 5,
       label: "Not Found",
       urlPattern: "/*",
       element: <NotFound />,
@@ -47,16 +54,6 @@ function App() {
             <Route key={item.id} path={item.urlPattern} element={item.element} />
           ))}
         </Routes>
-      {/* <h1>People Profiles</h1>
-      {data.map((person) => (
-        <PersonProfile
-          key={person.id}
-          id={person.id}
-          name={person.name}
-          birth={person.birth}
-          eyes={person.eyes}
-        />
-      ))} */}
       </RootLayout>
     // </div>
   );

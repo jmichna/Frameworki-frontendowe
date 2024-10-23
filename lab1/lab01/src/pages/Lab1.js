@@ -1,6 +1,6 @@
 import React from 'react';
 import PersonProfile from '../components/PersonProfile';
-import { data } from '../module-data'; // Import wygenerowanych danych
+import { data } from '../module-data';
 
 const Lab1 = () => {
   return (
@@ -13,6 +13,7 @@ const Lab1 = () => {
           name={person.name}
           birth={person.birth}
           eyes={person.eyes}
+          rating={person.rating}
         />
       ))}
     </div>

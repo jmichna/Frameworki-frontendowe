@@ -1,17 +1,16 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { data } from '../module-data'; // Import wygenerowanych danych
+import { data } from '../module-data';
 
 const Lab2 = () => {
-  const { id } = useParams(); // Pobieranie id z parametrów ścieżki
-  
-  // Konwersja id na liczbę
+  const { id } = useParams();
+ 
   const personId = parseInt(id, 10);
   
-  // Znajdowanie osoby po id
+  
   const person = data.find(p => p.id === personId);
 
-  // Obsługa błędnych lub brakujących parametrów
+  
   if (!id) {
     return <p>Brak identyfikatora osoby.</p>;
   }
@@ -20,7 +19,7 @@ const Lab2 = () => {
     return <p>Nie znaleziono osoby o tym identyfikatorze.</p>;
   }
 
-  // Wyświetlanie szczegółów osoby
+  
   return (
     <div>
       <h1>Profil osoby</h1>

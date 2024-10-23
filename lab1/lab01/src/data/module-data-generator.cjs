@@ -13,6 +13,11 @@ function getRandomEyeColor() {
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
+function getRandomRate() {
+    const rate = [1,2,3,4,5,6,7,8,9,10];
+    return rate[Math.floot(Math.random() * rate.length)]
+}
+
 
 const count = Number(process.argv[2]) || 10;
 
@@ -35,6 +40,7 @@ fs.readFile('./names.txt', 'utf8', (err, data) => {
             name: randomName,
             birth: generateRandomBirthDate(),
             eyes: getRandomEyeColor(),
+            rate: getRandomRate(),
         };
         content += `  ${JSON.stringify(person)},\n`;
     }
