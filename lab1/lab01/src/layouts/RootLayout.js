@@ -7,7 +7,8 @@ const RootLayout = ({ children }) => {
     { id: 1, label: 'Home', url: "/" },
     { id: 2, label: 'Laboratorium 1', url: "/lab1" },
     { id: 3, label: 'Laboratorium 2', url: "/lab2/1" },
-    { id: 4, label: 'Laboratorium 3', url: "/lab3"}
+    { id: 4, label: 'Laboratorium 3', url: "/lab3"},
+    { id: 5, label: 'Laboratorium 4', url: "/lab4"},
   ];
 
   return (

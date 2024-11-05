@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { data } from '../module-data';
+import AppContext from '../data/AppContext';
 
 const Lab2 = () => {
+  const { items } = useContext(AppContext);
   const { id } = useParams();
- 
   const personId = parseInt(id, 10);
-  
-  
-  const person = data.find(p => p.id === personId);
 
-  
+  const person = items.find(p => p.id === personId);
+
   if (!id) {
     return <p>Brak identyfikatora osoby.</p>;
   }
@@ -19,7 +17,6 @@ const Lab2 = () => {
     return <p>Nie znaleziono osoby o tym identyfikatorze.</p>;
   }
 
-  
   return (
     <div>
       <h1>Profil osoby</h1>

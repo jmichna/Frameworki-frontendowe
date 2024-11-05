@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap'; // Import Bootstrap komponentów
-import { Link } from 'react-router-dom'; // Import komponentu Link z react-router-dom
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavBarMenu = ({ items }) => {
   return (

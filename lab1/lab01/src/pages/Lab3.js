@@ -1,7 +1,7 @@
 import React from 'react';
 import FlexContainer from '../components/FlexContainer';
 import PersonProfile from '../components/PersonProfile';
-import { data } from '../module-data';
+import { data } from '../data/module-data';
 
 const Lab03 = () => {
   return (
